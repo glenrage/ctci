@@ -1,22 +1,29 @@
 {
-  "name": "ctci",
+  "name": "javascript-ctci-solutions",
   "version": "1.0.0",
-  "description": "",
-  "main": "ch1.js",
-  "directories": {
-    "test": "test"
-  },
+  "description": "Javascript solutions to Cracking the Coding Interview (CTCI)",
+  "main": "",
   "scripts": {
-    "test": "mocha"
+    "test": "nodemon ./node_modules/.bin/mocha"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/glenrage/ctci.git"
-  },
-  "author": "",
+  "keywords": [
+    "Cracking the Coding Interview",
+    "CTCI",
+    "javascript",
+    "mocha",
+    "chai",
+    "es6"
+  ],
+  "author": "Glen P",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/glenrage/ctci/issues"
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.0.15",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.0",
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
   },
-  "homepage": "https://github.com/glenrage/ctci#readme"
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
