@@ -1,6 +1,10 @@
 'use strict';
 
 /**
+
+URLify - Write a method that replaces all spaces in a string with '%20'. You may assume that the string has sufficient space at the end to hold the additional characters, and that you are given teh true length of the string.
+
+
  * Count the number of spaces in the string to calculate the new length of the
  * string and move characters back where required replacing spaces with %20.
  *

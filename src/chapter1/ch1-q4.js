@@ -1,6 +1,10 @@
 'use strict';
 
 /**
+
+Palindrome permutation - given a string, write a function to check if it is a permutation of a palindrome.
+
+
  * Go through characters in string and set flag to indicate if there is an
  * odd number of that character. If there is more than one character with an
  * odd number of occurences then it cannot be a palindrome.

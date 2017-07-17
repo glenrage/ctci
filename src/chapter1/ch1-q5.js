@@ -1,6 +1,8 @@
 'use strict';
 
 /**
+One away - there are 3 types of edits that can be performed on a string, insert a character, remove a charcter or replace a character. Given 2 strings, write a funciton to check if they are one or zero edits away. 
+
  * Scan through both strings's at the same time, when a difference is
  * encountered:
  *   * if this is the first edit:

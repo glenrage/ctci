@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint . && echo All good!",
-    "test": "nodemon ./node_modules/.bin/mocha"
+    "test": "node ./node_modules/.bin/mocha"
   },
   "license": "MIT",
   "devDependencies": {
@@ -18,5 +18,8 @@
     "mocha": "^3.4.2",
     "mocha-eslint": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "babel-register": "^6.24.1",
+    "nodemon": "^1.11.0"
+  }
 }

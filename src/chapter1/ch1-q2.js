@@ -1,6 +1,10 @@
 'use strict';
 
 /**
+
+check permutations - Given 2 strings, write a method to decide if one is a permutation of the other.
+
+
  * Keep track of characters counts with a Map data structure, fail when
  * str2 has a character different to str2 or if any characters are left over
  * at the end.

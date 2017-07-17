@@ -25,5 +25,3 @@ export function isConnectedBFS(graph, source, target) {
  * Time: O(M)
  * Additional space: O(N)
  */
-
-}

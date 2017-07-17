@@ -1,6 +1,8 @@
 'use strict';
 
 /**
+zero matrix - write an algo such that if an element in an MxM matrix is 0, its entire row and column are set to 0.
+
  * Do a first pass through the matrix to find which cells have 0's. When a 0 is
  * found then mark that row and column as needing to be zeroed out. On the second
  * pass zero out any cells that need to be zeroed out based on the row or column

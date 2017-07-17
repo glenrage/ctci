@@ -1,6 +1,8 @@
 'use strict';
 
 /**
+String rotation - assume you have a method isSubString which checks if one word is a substring of another. Given 2 strings, s1 and s2, write code to check if s2 is a rotation of s1 using only one call to isSubstring(e.g "waterbottle" is a rotation or "erbottlewat")
+
  * Duplicate the rotated string, if the substring being searched is a different
  * rotation of the string then it will be a substring of the new string. Both
  * strings must be the same length.
