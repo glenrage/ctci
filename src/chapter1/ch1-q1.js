@@ -13,7 +13,15 @@ isUnique  - Implement an algorithim to determine if a string has all unique char
  * @return {boolean}      True if unique characters, otherwise false
  */
 export function hasUniqueCharactersSet(str) {
+  let charSet = new Set();
 
+  for(let i in str) {
+    if(charSet.has(str[i])){
+      return false;
+    }
+    charSet.add(str[i])
+  }
+  return true;
 }
 
 /**
@@ -31,9 +39,16 @@ export function hasUniqueCharactersSet(str) {
 
 export function hasUniqueCharactersSort(str) {
   // sort string using quicksort
+  str.sort()
 
+  for(let i = 0; i < str.length; i++) {
+    if(str[i] === str[i + 1]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 export function isUniqueSet(str) {
-
+  return new Set(str).size === str.length;
 }

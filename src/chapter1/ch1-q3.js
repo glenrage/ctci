@@ -15,9 +15,10 @@ URLify - Write a method that replaces all spaces in a string with '%20'. You may
  * @param  {string[]} url URL string as a character arra which will be updated in place
  * @return {string[]}     Updated URL character array
  */
-export function encodeSpaces(url) {
+
+ export const URLify1 = (str) => str ? str.split(' ').join('%20') : str;
+
+ export const URLify2 = (str) => str ? str.replace(/\s/g, '%20') : str;
 
 
   // add an extra 2 characters for each space
-
-}

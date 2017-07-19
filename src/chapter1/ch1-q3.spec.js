@@ -1,19 +1,19 @@
 import { expect } from 'chai';
-import * as funcs from './ch1-q3';
+import * as funcs from './ch1-q3.js';
 
 for (let key in funcs) {
   let func = funcs[key];
 
-  describe('ch1-q3: ' + key, function() {
+  describe.only('ch1-q3: ' + key, function() {
 
     it('works with null/undefined as input', function() {
       expect(func(undefined)).to.be.undefined;
       expect(func(null)).to.be.null;
     });
 
-    it('works with an empty array as input', function() {
-      expect(func([])).to.eql([]);
-    });
+    // it('works with an empty array as input', function() {
+    //   expect(func([])).to.eql([]);
+    // });
 
     [
       'nospaces',
@@ -29,8 +29,8 @@ for (let key in funcs) {
     ].forEach(arg => {
 
       it(`returns true for unique string: '${arg}'`, function() {
-        let expected = arg.replace(/ /g, '%20').split('');
-        expect(func(arg.split(''))).to.eql(expected);
+        let expected = arg.replace(/ /g, '%20');
+        expect(func(arg)).to.eql(expected);
       });
 
     });
