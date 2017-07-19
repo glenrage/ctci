@@ -16,11 +16,24 @@ String rotation - assume you have a method isSubString which checks if one word 
  * @return {boolean}        True if str1 and str2 are rotated versions of eachother, otherwise false
  */
 export function isRotatedSubstring(str1, str2) {
+  if(!str1 || !str2) {
+    throw new Error('invalid input')
+  }
 
+  if(str1.length !== str2.length) return false;
+
+  return isSubstring(str1 + str1, str2)
 }
 
 // Implementation of isSubstring function which is defined in question
 // can only be called once
 function isSubstring(str, substr) {
+  return str.includes(substr)
+}
 
+export function isRotatedSubstring2(str1, str2) {
+  if (!str1 || !str1.length || !str2 || !str2.length) throw Error('invalid input');
+  if (str1.length !== str2.length) return false;
+
+  return (str1 + str1).indexOf(str2) > -1;
 }

@@ -13,7 +13,26 @@ import { getLength } from './helpers';
  * Additional space: O(1)
  */
 export function kthToLastTwoPointers(list, k) {
+  if(!list) {
+    throw new Error('invalid list');
+  }
 
+  let last = list, kth = list;
+
+  for(let i = 0; i < k; i++) {
+    last = last.next;
+  
+    if(!last) {
+      throw new Error('list is not long enough')
+    }
+  }
+
+  while(last.next) {
+    last = last.next;
+    kth = kth.next;
+  }
+
+  return kth.val
 }
 
 /**
@@ -26,5 +45,17 @@ export function kthToLastTwoPointers(list, k) {
  * Additional space: O(1)
  */
 export function kthToLastLength(list, k) {
+  if(!list) throw new Error('invalid list')
 
+  let length = getLength(list),
+    skip = length - k,
+    node = list;
+
+    if(skip <= 0)
+      throw new Error('list is not long enough');
+
+      for (let i = 1; i < skip; i++) {
+        node = node.next
+      }
+    return node.val
 }

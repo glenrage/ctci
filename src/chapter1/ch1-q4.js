@@ -17,5 +17,15 @@ Palindrome permutation - given a string, write a function to check if it is a pe
  * @return {boolean}      True if input string is a permutation of a palindrome (ignoring spaces), otherwise false
  */
 export function isPalindromePermutationsSet(str) {
+  if(!str) return false;
 
+  let chars = new Set()
+  for(let letter of str) {
+    if(letter !== ' ') {
+      if(chars.has(letter)) chars.delete(letter);
+      else chars.add(letter)
+    }
+  }
+  console.log(chars)
+  return chars.size <= 1
 }

@@ -9,5 +9,47 @@
  * Additional space: O(N)
  */
 export function removeDuplicatesSet(list) {
- // return list, head will never change
+  if (!list) {
+   return list;
+ }
+
+ let seen = new Set(),
+   node = list;
+ // add head
+ seen.add(node.val);
+
+ while (node.next) {
+
+   if (seen.has(node.next.val)) {
+     // skip next node
+     node.next = node.next.next;
+   }
+   else {
+     seen.add(node.next.val);
+     node = node.next;
+   }
+ }
+
+ return list; // return list, head will never change
 }
+
+// // |---~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~---|
+//
+// // O(Nˆ2) TIME --- O(1) SPACE
+//
+//
+// export function removeDupes2(head) {
+//   if (!head || !head.next) return head;
+//
+//   while (head) {
+//     let current = head;
+//     while (current.next) {
+//       if (current.next.value === head.value) {
+//         current.next = current.next.next;
+//       } else {
+//         current = current.next;
+//       }
+//     }
+//     head = head.next;
+//   }
+// }

@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import * as funcs from './ch1-q5';
+import * as funcs from './ch1-q5.js';
 
 for (let key in funcs) {
   let func = funcs[key];

@@ -5,7 +5,7 @@ import * as funcs from './ch2-q3';
 for (let key in funcs) {
   let func = funcs[key];
 
-  describe('ch2-q3: ' + key, function() {
+  describe.only('ch2-q3: ' + key, function() {
 
     it('throws an error if node is invalid', function() {
       expect(() => func(null)).to.throw('invalid node');
