@@ -34,6 +34,16 @@ npm run lint
 ### Dependencies
 This implementation of the solutions requires the following dependencies:
 
+
+
+
+
+* Node.js >= v5.0.0
+* npm >= v3
+* Mocha (installed via npm)
+* Chai (installed via npm)
+* Babel (installed via npm)
+
 * Node.js >= v5.0.0
 * npm >= v3
 * Mocha (installed via npm)
