@@ -12,5 +12,19 @@
  * Additional space: push O(1), pop O(1), peek O(1)
  */
 export class TripleStack {
+  constructor() {
+    this._array = [];
+    this._lengths = [0,0,0];
+  }
+
+  _getLength(stack) {
+    return this._lengths[stack - 1]
+  }
+
+  push(stack, value) {
+
+  }
+
+
 
 }
