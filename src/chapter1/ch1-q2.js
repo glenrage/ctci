@@ -1,9 +1,7 @@
 'use strict';
 
 /**
-
 check permutations - Given 2 strings, write a method to decide if one is a permutation of the other.
-
 
  * Keep track of characters counts with a Map data structure, fail when
  * str2 has a character different to str2 or if any characters are left over
@@ -17,6 +15,7 @@ check permutations - Given 2 strings, write a method to decide if one is a permu
  * @param  {string[]} str1 Second string, passed in as a character array
  * @return {boolean}       True if first and second strings are permutations otherwise false
  */
+
 export function isPermutationMap(str1, str2) {
   if (str1.length === 0 || str1.length !== str2.length) {
       return false;
@@ -56,6 +55,7 @@ export function isPermutationMap(str1, str2) {
  * @param  {string[]} str1 Second string, passed in as a character array
  * @return {boolean}       True if first and second strings are permutations otherwise false
  */
+
 export function isPermutationSorted(str1, str2) {
   if(str1.length === 0 || str1.length !== str2.length) {
     return false;
@@ -63,7 +63,6 @@ export function isPermutationSorted(str1, str2) {
 
   str1.sort();
   str2.sort();
-
 
   return str1.every((v, i) => {
     return v === str2[i]
