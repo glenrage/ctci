@@ -2,6 +2,8 @@
 
 import { createNode } from './helpers';
 
+//sum lists: u have two numbers represented by a linked list, where each ndde contains a single digit. The digits are stored in reverse order, such as that the 1's digit is at the head of the list. Write a function that adds the two numbers and returns the sum as a linked list.
+
 /**
  * Walk through both lists in step summing each digit. Where the sum is greater
  * than 10 then maintain a carry value. Where one list is longer than the other

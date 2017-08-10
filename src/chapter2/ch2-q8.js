@@ -1,5 +1,5 @@
 'use strict';
-
+//loop detection - given a cricular linked list, implement an algorithm that returns the node at the beginning of the loop
 /**
  * This algorithm simply stores each node it sees into a Set structure, if there
  * is a cycle then the first repeat we see will be the start of that cycle and

@@ -1,6 +1,7 @@
 'use strict';
 
 import { getLength } from './helpers';
+//Implement a function to check if a linked list is a palindrome.
 
 /**
  * First find out the length of the list, then walk through half of the list

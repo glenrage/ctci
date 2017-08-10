@@ -14,15 +14,7 @@ isUnique  - Implement an algorithim to determine if a string has all unique char
  */
 
 export function hasUniqueCharactersSet(str) {
-  let charSet = new Set();
 
-  for(let i in str) {
-    if(charSet.has(str[i])){
-      return false;
-    }
-    charSet.add(str[i])
-  }
-  return true;
 }
 
 /**

@@ -1,6 +1,7 @@
 'use strict';
 
 import { getLength } from './helpers';
+//2.2 Return Kth to last : Implement an algo to find the kth to last element of a singly linked list
 
 /**
  * Walk one pointer ahead k nodes first then create a second pointer to the
@@ -21,7 +22,7 @@ export function kthToLastTwoPointers(list, k) {
 
   for(let i = 0; i < k; i++) {
     last = last.next;
-  
+
     if(!last) {
       throw new Error('list is not long enough')
     }
