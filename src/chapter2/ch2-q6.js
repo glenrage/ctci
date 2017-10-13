@@ -15,11 +15,9 @@ import { getLength } from './helpers';
  * Additional space: O(N)
  */
 export function isPalindromeStack(list) {
-
   // since we only put half the items on the stack it shouldn't be possible
   // for there to be anything left in the stack so it should always be empty
   // as such this check isn't really necessary and this could just be return true
-
 }
 
 /**
@@ -35,6 +33,25 @@ export function isPalindromeStack(list) {
  * Time: O(N)
  * Additional space: O(1)
  */
-export function isPalindromeReverse(list) {
 
+// RECURSIVE SOLUTION
+export function isPalindromeRecursive(list) {
+  const palindrome = recursiveIsPalindrome(list, getListLength(list));
+  return palindrome.result;
+}
+
+function recursiveIsPalindrome(list, length) {
+  // If length is even
+  if (!list || length === 0) return { node: list, result: true };
+  else if (length === 1)
+    // If length is odd
+    return { node: list.next, result: true };
+
+  const compareNodes = recursiveIsPalindrome(list.next, length - 2);
+  if (!compareNodes.result || !compareNodes.node) return compareNodes;
+
+  compareNodes.result = list.value === compareNodes.node.value;
+  compareNodes.node = compareNodes.node.next;
+
+  return compareNodes;
 }
