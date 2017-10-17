@@ -106,3 +106,51 @@ function fibonacci(n) {
 
   return fibo[n];
 }
+
+function smallestCommons(arr) {
+  var max = Math.max(arr[0], arr[1]);
+  var min = Math.min(arr[0], arr[1]);
+  var multiple = max;
+  console.log(multiple);
+
+  for (var i = max; i >= min; i--) {
+    if (multiple % i !== 0) {
+      multiple += max;
+      i = max;
+    }
+  }
+
+  return multiple;
+}
+
+function sumPrimes(num) {
+  function isPrime(n) {
+    for (var i = 2; i <= n; i++) {
+      if (n % i === 0 && n !== i) return false;
+    }
+    return true;
+  }
+  if (num === 1) return 0;
+
+  if (isPrime(num) === false) {
+    return sumPrimes(num - 1);
+  }
+
+  if (isPrime(num) === true) {
+    return num + sumPrimes(num - 1);
+  }
+}
+
+function sumFibs(num) {
+  let arrFibs = [1];
+  for (var i = 1; i <= num; ) {
+    arrFibs.push(i);
+    i = arrFibs[arrFibs.length - 1] + arrFibs[arrFibs.length - 2];
+  }
+
+  var res = arrFibs.reduce(function(prev, curr) {
+    if (curr % 2 !== 0) return prev + curr;
+    else return prev;
+  });
+  return res;
+}
