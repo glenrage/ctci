@@ -173,3 +173,21 @@ function subStringFinder(str, subStr) {
 
   return -1;
 }
+
+// From a unsorted array, check whether there are any two numbers that will sum up to a given number?
+
+function checkSum(arr, sum) {
+  //loop through array
+  for (var i = 0; i < arr.length - 1; i++) {
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === sum) return true;
+      else return false;
+    }
+  }
+
+  //each loop, check current index with next number
+
+  //if 2 elements equal sum, return true
+
+  //else return false
+}
