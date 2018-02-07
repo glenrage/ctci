@@ -191,3 +191,15 @@ function checkSum(arr, sum) {
 
   //else return false
 }
+
+function harmlessNote(noteText, magazineText) {
+  var noteArray = noteText.split(' ');
+  var magArray = magazineText.split(' ');
+
+  var magObj = {};
+
+  magArray.forEach(word => {
+    if (!magObj[word]) magObj[word] = 0;
+    magObj[word]++;
+  });
+}
